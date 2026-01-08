@@ -1,0 +1,200 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* PAGE BACKGROUND */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #1e3c72, #2a5298);
+  min-height: 100vh;
+}
+
+/* MAIN CARD */
+.app-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* HEADINGS */
+h1, h2 {
+  text-align: center;
+  color: #1e3c72;
+}
+
+/* FORM CARD */
+.form-card {
+  width: 350px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 10px;
+  background: #f9fafc;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* INPUTS */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #1e3c72;
+}
+
+/* BUTTONS */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #16315f;
+}
+
+/* LINK BUTTON */
+.link-btn {
+  background: transparent;
+  color: #1e3c72;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.link-btn:hover {
+  text-decoration: underline;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th {
+  background: #1e3c72;
+  color: white;
+  padding: 12px;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+  background: #f2f4f7;
+}
+
+/* ROLE BADGE */
+.role-badge {
+  display: inline-block;
+  background: #2a5298;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* ERROR / SUCCESS */
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.success {
+  color: green;
+  text-align: center;
+  margin-top: 10px;
+}
+/* ================== ANIMATIONS ================== */
+
+/* Fade + Slide Up */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scale In */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply page animation */
+.app-container {
+  animation: fadeUp 0.6s ease-in-out;
+}
+
+/* Form animation */
+.form-card {
+  animation: scaleIn 0.5s ease-in-out;
+}
+
+/* Button hover animation */
+button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Input focus animation */
+input {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+  box-shadow: 0 0 6px rgba(30, 60, 114, 0.4);
+}
+
+/* Table row hover animation */
+table tr {
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+table tr:hover {
+  background-color: #e8ecf5;
+  transform: scale(1.01);
+}
+
+/* Role badge animation */
+.role-badge {
+  animation: fadeUp 0.7s ease-in-out;
+}
